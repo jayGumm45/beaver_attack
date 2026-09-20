@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d30so468o0gnk"]
+
+[node name="Area2D" type="Area2D" unique_id=707031932]
+
+[node name="OuterWall1" type="CollisionPolygon2D" parent="." unique_id=736800294]
+polygon = PackedVector2Array(1, 0, 720, 0, 720, 24, 0, 24)
+
+[node name="OuterWall2" type="CollisionPolygon2D" parent="." unique_id=1485878235]
+polygon = PackedVector2Array(0, 0, 0, 480, 720, 480, 720, 16, 696, 16, 696, 456, 24, 456, 24, 24)
+
+[node name="Aisle1" type="CollisionPolygon2D" parent="." unique_id=1898450938]
+polygon = PackedVector2Array(128, 72, 128, 408, 88, 408, 88, 72)
+
+[node name="Aisle2" type="CollisionPolygon2D" parent="." unique_id=1498791497]
+polygon = PackedVector2Array(192, 72, 232, 72, 232, 408, 192, 408)
+
+[node name="Aisle3" type="CollisionPolygon2D" parent="." unique_id=1678553137]
+polygon = PackedVector2Array(528, 72, 488, 72, 488, 408, 528, 408, 528, 80)
+
+[node name="Aisle4" type="CollisionPolygon2D" parent="." unique_id=2027560864]
+polygon = PackedVector2Array(632, 72, 592, 72, 592, 408, 632, 408)
+
+[node name="BBQStation" type="CollisionPolygon2D" parent="." unique_id=400488183]
+polygon = PackedVector2Array(296, 104, 424, 104, 424, 200, 296, 200)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1212083586]
+polygon = PackedVector2Array(296, 376, 296, 280, 424, 280, 424, 376)
