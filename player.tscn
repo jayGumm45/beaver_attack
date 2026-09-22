@@ -1,30 +1,28 @@
 [gd_scene format=3 uid="uid://0dxeu208xuv0"]
 
 [ext_resource type="Script" uid="uid://c520tnfw57d54" path="res://player.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://cqncdfinr7cee" path="res://art/playerShopper_up1.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://dh82ytwexxgqx" path="res://art/playerShopper_up2.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://ccybhu6jxmsvi" path="res://art/playerShopper_walk1.png" id="4_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://cdan0ihxnhlhg" path="res://art/playerShopper_walk2.png" id="5_dw050"]
+[ext_resource type="Texture2D" uid="uid://c131fj6aw5686" path="res://art/idle.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://dpawvlr21bf17" path="res://art/jump.png" id="3_hqtel"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lg1c5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_sweqy")
+"texture": ExtResource("2_i3pqv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_2hs0m")
+"texture": ExtResource("3_hqtel")
 }],
 "loop": 1,
 "name": &"Up",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_1jxqw")
+"duration": 0.5,
+"texture": ExtResource("2_i3pqv")
 }, {
-"duration": 1.0,
-"texture": ExtResource("5_dw050")
+"duration": 0.5,
+"texture": ExtResource("3_hqtel")
 }],
 "loop": 1,
 "name": &"Walk",
@@ -32,8 +30,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b26j0"]
-radius = 144.0
-height = 512.0
+radius = 16.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1825948697]
 script = ExtResource("1_sweqy")
@@ -42,7 +40,8 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=298050350]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_lg1c5")
-animation = &"Up"
+animation = &"Walk"
+frame_progress = 0.5904807
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=648216473]
