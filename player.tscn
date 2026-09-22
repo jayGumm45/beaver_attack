@@ -33,7 +33,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b26j0"]
 radius = 144.0
-height = 832.0
+height = 512.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1825948697]
 script = ExtResource("1_sweqy")
@@ -46,5 +46,4 @@ animation = &"Up"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=648216473]
-scale = Vector2(0.3, 0.3)
 shape = SubResource("CapsuleShape2D_b26j0")
