@@ -47,3 +47,5 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=648216473]
 shape = SubResource("CapsuleShape2D_b26j0")
+
+[connection signal="hit" from="." to="." method="_on_hit"]
