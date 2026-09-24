@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c5l2x4m1i2ngo" path="res://tile_map_layer.tscn" id="1_285bg"]
 [ext_resource type="PackedScene" uid="uid://bv8bpr4ngufkm" path="res://2Dplayer.tscn" id="2_11uvh"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0438"]
+size = Vector2(64, 64)
+
 [node name="Main (tilemap)" type="Node" unique_id=88567492]
 script = ExtResource("1_11uvh")
 
@@ -11,10 +14,17 @@ script = ExtResource("1_11uvh")
 script = null
 
 [node name="CharacterBody2D" parent="." unique_id=1779731844 node_paths=PackedStringArray("tilemap") instance=ExtResource("2_11uvh")]
-position = Vector2(16, 16)
+position = Vector2(48, 48)
 tilemap = NodePath("../TileMapLayer")
 
 [node name="StartTimer" type="Timer" parent="." unique_id=1573854963]
 wait_time = 2.0
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=1114500734]
+[node name="beaver_nuggets" type="RigidBody2D" parent="." unique_id=473160635]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="beaver_nuggets" unique_id=2024970899]
+position = Vector2(672, 256)
+shape = SubResource("RectangleShape2D_a0438")
+
+[node name="Sprite2D" type="Sprite2D" parent="beaver_nuggets" unique_id=1912829295]
