@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://drf7hahq5yg5g"]
+
+[ext_resource type="PackedScene" uid="uid://bepr8i6clwlq4" path="res://player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://d30so468o0gnk" path="res://map.tscn" id="2_h2yge"]
+[ext_resource type="Script" path="res://beaver_nuggets.gd" id="3_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0438"]
+size = Vector2(16, 24)
+
+[node name="Main" type="Node" unique_id=1322436794]
+
+[node name="Player" parent="." unique_id=274792173 instance=ExtResource("1_0xm2m")]
+position = Vector2(416, 456)
+
+[node name="Area2D" parent="." unique_id=707031932 instance=ExtResource("2_h2yge")]
+
+[node name="BeaverNuggets" type="RigidBody2D" parent="." unique_id=1922946659]
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeaverNuggets" unique_id=1627654588]
+position = Vector2(784, 52)
+shape = SubResource("RectangleShape2D_a0438")
+
+[connection signal="body_entered" from="BeaverNuggets" to="BeaverNuggets" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="BeaverNuggets" to="BeaverNuggets" method="_on_body_shape_entered"]
+[connection signal="hit" from="BeaverNuggets" to="Player" method="_on_beaver_nuggets_hit"]

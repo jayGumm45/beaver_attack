@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c3ou3xbqmksnb"]
 
+[ext_resource type="Script" uid="uid://b8ggpsivkgusc" path="res://main(tilemap).gd" id="1_11uvh"]
 [ext_resource type="PackedScene" uid="uid://c5l2x4m1i2ngo" path="res://tile_map_layer.tscn" id="1_285bg"]
 [ext_resource type="PackedScene" uid="uid://bv8bpr4ngufkm" path="res://2Dplayer.tscn" id="2_11uvh"]
 
 [node name="Main (tilemap)" type="Node" unique_id=88567492]
+script = ExtResource("1_11uvh")
 
 [node name="TileMapLayer" parent="." unique_id=388770891 instance=ExtResource("1_285bg")]
 script = null
@@ -11,3 +13,8 @@ script = null
 [node name="CharacterBody2D" parent="." unique_id=1779731844 node_paths=PackedStringArray("tilemap") instance=ExtResource("2_11uvh")]
 position = Vector2(16, 16)
 tilemap = NodePath("../TileMapLayer")
+
+[node name="StartTimer" type="Timer" parent="." unique_id=1573854963]
+wait_time = 2.0
+
+[node name="CountdownTimer" type="Timer" parent="." unique_id=1114500734]

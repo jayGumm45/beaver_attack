@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d30so468o0gnk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_glk3s"]
+
+[node name="Map" type="StaticBody2D" unique_id=692081796]
+
+[node name="OuterWall1" type="CollisionPolygon2D" parent="." unique_id=736800294]
+polygon = PackedVector2Array(1, 0, 832, 0, 832, 24, 0, 24)
+
+[node name="OuterWall2" type="CollisionPolygon2D" parent="." unique_id=1485878235]
+polygon = PackedVector2Array(0, 0, 0, 512, 832, 512, 832, 16, 808, 16, 808, 488, 24, 488, 24, 24)
+
+[node name="Aisle1" type="CollisionPolygon2D" parent="." unique_id=1898450938]
+material = SubResource("CanvasItemMaterial_glk3s")
+polygon = PackedVector2Array(144, 88, 144, 424, 104, 424, 104, 88)
+
+[node name="Aisle2" type="CollisionPolygon2D" parent="." unique_id=1498791497]
+polygon = PackedVector2Array(216, 88, 256, 88, 256, 424, 216, 424)
+
+[node name="Aisle3" type="CollisionPolygon2D" parent="." unique_id=1678553137]
+polygon = PackedVector2Array(592, 88, 552, 88, 552, 424, 592, 424, 592, 96)
+
+[node name="Aisle4" type="CollisionPolygon2D" parent="." unique_id=2027560864]
+polygon = PackedVector2Array(720, 88, 680, 88, 680, 424, 720, 424)
+
+[node name="BBQStation" type="CollisionPolygon2D" parent="." unique_id=400488183]
+position = Vector2(56, 8)
+polygon = PackedVector2Array(296, 104, 424, 104, 424, 200, 296, 200)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1212083586]
+polygon = PackedVector2Array(352, 400, 352, 304, 480, 304, 480, 400)
