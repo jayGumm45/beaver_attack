@@ -4,6 +4,7 @@ signal hit
 
 @export var speed = 400
 var screen_size
+var can_move = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,9 +29,11 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
+	
+	if can_move:
+		position+=velocity*delta
+		move_and_slide()
 		
-	position+=velocity*delta
-	move_and_slide()
 	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "Walk"
@@ -49,5 +52,5 @@ func start(pos):
 	show()
 	$CollisionShape2D.disabled = false
 
-func _on_hit() -> void:
-	pass # Replace with function body.
+func _on_beaver_nuggets_hit() -> void:
+	can_move = false

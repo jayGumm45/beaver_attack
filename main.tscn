@@ -22,3 +22,5 @@ position = Vector2(784, 52)
 shape = SubResource("RectangleShape2D_a0438")
 
 [connection signal="body_entered" from="BeaverNuggets" to="BeaverNuggets" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="BeaverNuggets" to="BeaverNuggets" method="_on_body_shape_entered"]
+[connection signal="hit" from="BeaverNuggets" to="Player" method="_on_beaver_nuggets_hit"]
