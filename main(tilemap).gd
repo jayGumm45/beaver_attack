@@ -14,7 +14,7 @@ func game_over():
 
 func new_game():
 	timer = 10
-	$Player.start($StartPosition.position)
+#	$Player.start($StartPosition.position)
 	$CountdownTimer.start()
 	
 func _on_count_down_timeout():

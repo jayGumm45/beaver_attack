@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal win
+
 @onready var _animation_player = $AnimationPlayer
 
 @export var tilemap: TileMapLayer
@@ -10,6 +12,7 @@ var is_moving: bool = false
 var target_position: Vector2
 var tile_size: Vector2
 var screen_size
+var can_move = true
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -51,7 +54,7 @@ func _process(_delta):
 
 func try_move(dir: Vector2) -> void:
 	var destination := global_position + dir * tile_size
-	if is_walkable(destination):
+	if is_walkable(destination) and can_move:
 		target_position = destination
 		is_moving = true
  
@@ -87,3 +90,9 @@ func _physics_process(delta: float) -> void:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 #
 	#move_and_slide()
+
+
+func _on_beaver_nuggets_body_entered(body: Node) -> void:
+	print("flag")
+	can_move=false
+	win.emit()

@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://b8ggpsivkgusc" path="res://main(tilemap).gd" id="1_11uvh"]
 [ext_resource type="PackedScene" uid="uid://c5l2x4m1i2ngo" path="res://tile_map_layer.tscn" id="1_285bg"]
 [ext_resource type="PackedScene" uid="uid://bv8bpr4ngufkm" path="res://2Dplayer.tscn" id="2_11uvh"]
+[ext_resource type="Texture2D" uid="uid://cwvtxv4n2wdmf" path="res://art/cozy_cafe_icons.png" id="4_74oy4"]
+
+[sub_resource type="GDScript" id="GDScript_11uvh"]
+script/source = "extends RigidBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0438"]
 size = Vector2(64, 64)
@@ -21,10 +36,23 @@ tilemap = NodePath("../TileMapLayer")
 wait_time = 2.0
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=1114500734]
+
 [node name="beaver_nuggets" type="RigidBody2D" parent="." unique_id=473160635]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 1
+script = SubResource("GDScript_11uvh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="beaver_nuggets" unique_id=2024970899]
 position = Vector2(672, 256)
 shape = SubResource("RectangleShape2D_a0438")
 
 [node name="Sprite2D" type="Sprite2D" parent="beaver_nuggets" unique_id=1912829295]
+position = Vector2(672, 256)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_74oy4")
+
+[connection signal="body_entered" from="beaver_nuggets" to="." method="_on_beaver_nuggets_body_entered"]
+[connection signal="body_entered" from="beaver_nuggets" to="CharacterBody2D" method="_on_beaver_nuggets_body_entered"]
