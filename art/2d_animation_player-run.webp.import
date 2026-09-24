@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://denenv18cgrub"
-path="res://.godot/imported/PlaceholderEnemy.png-bc13922302191528b6641de5ce2ae718.ctex"
+uid="uid://up4i6x58pask"
+path="res://.godot/imported/2d_animation_player-run.webp-435f889b110f53dd2ef2dd4fda8aff49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/PlaceholderEnemy.png"
-dest_files=["res://.godot/imported/PlaceholderEnemy.png-bc13922302191528b6641de5ce2ae718.ctex"]
+source_file="res://art/2d_animation_player-run.webp"
+dest_files=["res://.godot/imported/2d_animation_player-run.webp-435f889b110f53dd2ef2dd4fda8aff49.ctex"]
 
 [params]
 
