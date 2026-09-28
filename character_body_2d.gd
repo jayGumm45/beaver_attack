@@ -93,6 +93,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_beaver_nuggets_body_entered(body: Node) -> void:
-	print("flag")
 	can_move=false
 	win.emit()

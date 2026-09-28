@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://be7i0t2ft7n7e"]
+
+[ext_resource type="Texture2D" uid="uid://c0aoiam2xapd" path="res://art/WinScreen-1.png" id="1_w5032"]
+
+[node name="You Win" type="CanvasLayer" unique_id=1537225901]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1960901872]
+custom_minimum_size = Vector2(832, 512)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_w5032")
+expand_mode = 1
+stretch_mode = 5
