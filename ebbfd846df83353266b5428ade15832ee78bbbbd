@@ -1,0 +1,192 @@
+[33mcommit ebbfd846df83353266b5428ade15832ee78bbbbd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Mon Sep 28 09:15:44 2026 -0500
+
+    Edited the layout of the map slightly
+
+[33mcommit bb702f29d5d78f69bd8fc2cc6416ef6aa723fe45[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Sun Sep 27 16:42:07 2026 -0500
+
+    Finished HUD Start Screen.
+
+[33mcommit da728dd297b9d8d4dc8ca45b69fdd1a05ef956ab[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 15:04:43 2026 -0500
+
+    Added a sprite and functionality to the beaver nuggets
+
+[33mcommit 8b6f5d8257f5d005ed5acae1462f6565233c2dbe[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Thu Sep 24 15:02:09 2026 -0500
+
+    Created HUD Scene. Includes timer, message, start button.
+
+[33mcommit 592ccbd3c2a02beda8e3fe497ee00094fb5843a4[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 14:32:29 2026 -0500
+
+    Fixed player character and added what will be the goal.
+
+[33mcommit c3f77817ce63e72ca40bdc70f3a0fa0e165d8890[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Thu Sep 24 14:27:32 2026 -0500
+
+    Added Script to main & Created timer child nods
+
+[33mcommit 308f453280357e610681ea4fc69d24cf6f96e1f2[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 14:12:23 2026 -0500
+
+    deleted unused game files
+
+[33mcommit da23896b89ce9c1c3e8cae803af5c36eea8f6c02[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 14:06:39 2026 -0500
+
+    Made the tilemap scene the main scene
+
+[33mcommit 4cdc81e70c6e3c1113947bebb35d01c92ce3db2f[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 11:02:29 2026 -0500
+
+    Just kidding now I added the beaver nuggets
+
+[33mcommit c5f4f6c8e8d103946cdaf61399a558f96ad6ca50[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 10:57:55 2026 -0500
+
+    Just kidding now I updated the map to fill the screen
+
+[33mcommit af806ec341af10a5f82410d49a394c7ab582f704[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 24 10:52:45 2026 -0500
+
+    Changed the map to fill the screen and added a goal.
+
+[33mcommit d89fcb73a5d9c4a73c13f3e9e54b59bd5d515fc9[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Wed Sep 23 20:25:11 2026 -0500
+
+    added character functionality with tilemap layer
+
+[33mcommit bff5e7cdbadba1123ee1e289ed39257971fc5113[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Tue Sep 22 14:57:46 2026 -0500
+
+    Changed player size
+
+[33mcommit 50317cbbe5a7bb73f49e6cb4f93797b7b4765ebd[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Tue Sep 22 14:55:11 2026 -0500
+
+    Fixed the walking animation
+
+[33mcommit 0283718ccbc20d287a2593de1abf4927a0d3a203[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Tue Sep 22 14:40:25 2026 -0500
+
+    Housekeeping stuff with the player
+
+[33mcommit 09d7c5b11ec55999a57c0e4f8be9ec4cbf68f2bf[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Tue Sep 22 14:39:12 2026 -0500
+
+    created practice tilemap
+
+[33mcommit 7175d2d0ac4ebade1f4eb9740a6e47ab04f1c52a[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Tue Sep 22 14:35:10 2026 -0500
+
+    Added new sprites for the player character:
+
+[33mcommit 2f8484a7c86899777fa4cec76ec73061acf4ffd5[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 22 14:29:34 2026 -0500
+
+    Added hit signal, on hit function, start function, and on body entered function.
+
+[33mcommit 89f12f84f0b79f3ab92d1dd61c72a4a5e7d15fd4[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 22 14:10:19 2026 -0500
+
+    Edited code in player script
+
+[33mcommit 6cc2a9fbd440cd2b6260b8e7e632a88b1c816845[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Tue Sep 22 13:55:50 2026 -0500
+
+    created tilemap with placeholder tileset
+
+[33mcommit e80be419c56536b67085c6f0c4cc868579b135d9[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Tue Sep 22 13:32:10 2026 -0500
+
+    Created enemy character, began work on a tilemap
+
+[33mcommit 440fd4b0b895237be0727808f97c183ead7c3c9d[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 22 11:25:22 2026 -0500
+
+    Movement needs to be fixed. Fix character shaking.
+
+[33mcommit a7ed63c9fd6e5c7b29ce515cf3ef885901d956c5[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 22 08:30:43 2026 -0500
+
+    Added new player images and circular collision shape.
+
+[33mcommit 130e6c7362543b332dfba1bbbbcbef2afe43d51a[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Sun Sep 20 21:38:25 2026 -0500
+
+    Renamed map file
+
+[33mcommit 2f55c1a58c15b7c039ffde2faee2cc0a8528150c[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Sun Sep 20 21:35:54 2026 -0500
+
+    Added collision and movement, adjusted player speed, added a main node, and a few more housekeeping things
+
+[33mcommit 36b63e855936f17ce67a31e95488179b470afdde[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Sun Sep 20 10:01:24 2026 -0500
+
+    Added a map shape and decreased player hitbox so they can fit through the corridors
+
+[33mcommit 5679e19ba0f2c463203a0577e1bd4ee1c198e4ed[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 17 15:12:37 2026 -0500
+
+    fix merge conflict
+
+[33mcommit 03cab4395f68f8906b469b4669e328b1ef18a7e2[m
+Merge: f30c6c5 9aae767
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 15 15:06:38 2026 -0500
+
+    Player creation and movement (second try)
+
+[33mcommit f30c6c5e411bae5ded73db80be2bccfecf7878de[m
+Author: Caleb <calab.a.andrews123@gmail.com>
+Date:   Tue Sep 15 15:03:43 2026 -0500
+
+    Player creation and movement
+
+[33mcommit 9aae767d5c9254ab9ba568e164823bc1e377f327[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Tue Sep 15 14:49:52 2026 -0500
+
+    changed view window
+
+[33mcommit e29954163e932dda0c3a5a4021458de9bc831108[m
+Author: LTolbert <tolbertlw@gmail.com>
+Date:   Thu Sep 10 15:06:12 2026 -0500
+
+    Added an animated sprite, mostly to test using git
+
+[33mcommit 21d8678e637d504ec4d16fdb2f22ac8a5f83c256[m
+Author: Jay <jaydsg5@gmail.com>
+Date:   Thu Sep 10 14:55:36 2026 -0500
+
+    Initial commit
