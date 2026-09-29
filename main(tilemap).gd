@@ -2,21 +2,22 @@ extends Node
 
 var timer
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func game_over():
 	$CountdownTimer.stop()
 	$HUD.show_game_over()
-
-func new_game():
-	#$HUD.update_score(score)
-	$HUD.show_message("Get Ready")
-	timer = 10
-#	$Player.start($StartPosition.position)
-	$CountdownTimer.start()
 	
-func _on_count_down_timeout():
+	
+func new_game():
+	timer = 10
+	$HUD.update_timer(timer)
+	$HUD.show_message("Get Ready")
+	await get_tree().create_timer(1.0).timeout
+	$HUD.hide_message()
+	$CountdownTimer.start()
+
+func _on_countdown_timer_timeout():
 	timer -= 1
-	#$HUD.update_score(score)
+	$HUD.update_timer(timer)
+	if timer <=0:
+		$CountdownTimer.stop()
+		game_over()

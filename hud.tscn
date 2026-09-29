@@ -5,10 +5,6 @@
 [node name="HUD" type="CanvasLayer" unique_id=31480010]
 script = ExtResource("1_37p78")
 
-[node name="MessageTimer" type="Timer" parent="." unique_id=1243650904]
-wait_time = 2.0
-one_shot = true
-
 [node name="Message" type="Label" parent="." unique_id=1829311067]
 anchors_preset = 8
 anchor_left = 0.5
@@ -55,5 +51,7 @@ text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[node name="MessageTimer" type="Timer" parent="." unique_id=1243650904]
+one_shot = true
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
