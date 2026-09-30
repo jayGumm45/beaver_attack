@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ygh4h08ig0ng"]
 
-[ext_resource type="Texture2D" uid="uid://b6lpvqbou54x6" path="res://art/PlaceholderEnemy.png" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://denenv18cgrub" path="res://art/PlaceholderEnemy.png" id="1_7k104"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2q5n"]
 animations = [{
@@ -26,7 +26,6 @@ radius = 47.0
 height = 212.0
 
 [node name="Enemy" type="CharacterBody2D" unique_id=648496320]
-position = Vector2(171, 189)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829222183]
