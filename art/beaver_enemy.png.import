@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccybhu6jxmsvi"
-path="res://.godot/imported/playerShopper_walk1.png-b281e6e4364a0abe16811844f5ef7597.ctex"
+uid="uid://cx8baa4ydhexs"
+path="res://.godot/imported/beaver_enemy.png-1e4b04da7de77cc59750b9694c6f75b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/playerShopper_walk1.png"
-dest_files=["res://.godot/imported/playerShopper_walk1.png-b281e6e4364a0abe16811844f5ef7597.ctex"]
+source_file="res://art/beaver_enemy.png"
+dest_files=["res://.godot/imported/beaver_enemy.png-1e4b04da7de77cc59750b9694c6f75b5.ctex"]
 
 [params]
 

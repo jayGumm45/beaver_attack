@@ -4,12 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://c5l2x4m1i2ngo" path="res://tile_map_layer.tscn" id="1_285bg"]
 [ext_resource type="PackedScene" uid="uid://bv8bpr4ngufkm" path="res://2Dplayer.tscn" id="2_11uvh"]
 [ext_resource type="Texture2D" uid="uid://cwvtxv4n2wdmf" path="res://art/cozy_cafe_icons.png" id="4_74oy4"]
-<<<<<<< HEAD
+
 [ext_resource type="PackedScene" uid="uid://biyperk20d4ce" path="res://hud.tscn" id="5_lxgm5"]
-=======
-[ext_resource type="PackedScene" uid="uid://be7i0t2ft7n7e" path="res://you_win.tscn" id="5_lxgm5"]
+[ext_resource type="PackedScene" uid="uid://be7i0t2ft7n7e" path="res://you_win.tscn" id="7_youwin"]
 [ext_resource type="Script" uid="uid://b3vr70u32bwbk" path="res://you_win.gd" id="6_ddibf"]
->>>>>>> 9436df85c8c4444333bbcbb95a638cf75d284b33
+
 
 [sub_resource type="GDScript" id="GDScript_11uvh"]
 script/source = "extends RigidBody2D
@@ -58,16 +57,16 @@ position = Vector2(672, 256)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("4_74oy4")
 
-<<<<<<< HEAD
+
 [node name="HUD" parent="." unique_id=31480010 instance=ExtResource("5_lxgm5")]
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
-=======
-[node name="You Win" parent="." unique_id=1537225901 instance=ExtResource("5_lxgm5")]
+
+[node name="You Win" parent="." unique_id=1537225901 instance=ExtResource("7_youwin")]
 script = ExtResource("6_ddibf")
 
 [connection signal="win" from="CharacterBody2D" to="You Win" method="_on_character_body_2d_win"]
->>>>>>> 9436df85c8c4444333bbcbb95a638cf75d284b33
+
 [connection signal="body_entered" from="beaver_nuggets" to="." method="_on_beaver_nuggets_body_entered"]
 [connection signal="body_entered" from="beaver_nuggets" to="CharacterBody2D" method="_on_beaver_nuggets_body_entered"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
