@@ -1,38 +1,15 @@
 [gd_scene format=3 uid="uid://ygh4h08ig0ng"]
 
-[ext_resource type="Texture2D" uid="uid://denenv18cgrub" path="res://art/PlaceholderEnemy.png" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://cx8baa4ydhexs" path="res://art/beaver_enemy.png" id="1_7k104"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_g2q5n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_7k104")
-}],
-"loop": 1,
-"name": &"moving",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_7k104")
-}],
-"loop": 1,
-"name": &"standing",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8mpy"]
-radius = 47.0
-height = 212.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6lj2"]
+size = Vector2(32, 32)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=648496320]
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829222183]
-position = Vector2(1, 1.4999907)
-scale = Vector2(11.749997, 13.187499)
-sprite_frames = SubResource("SpriteFrames_g2q5n")
-animation = &"standing"
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1262521638]
+texture = ExtResource("1_7k104")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2031941788]
-shape = SubResource("CapsuleShape2D_t8mpy")
+shape = SubResource("RectangleShape2D_e6lj2")
