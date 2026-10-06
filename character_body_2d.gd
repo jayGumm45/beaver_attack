@@ -96,6 +96,8 @@ func _on_beaver_nuggets_body_entered(body: Node) -> void:
 	can_move=false
 	win.emit()
 
-
 func _on_game_start() -> void:
 	can_move=true
+
+func _on_lose() -> void:
+	can_move=false

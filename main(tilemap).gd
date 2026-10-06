@@ -2,9 +2,12 @@ extends Node
 
 var timer
 
+signal lose
+
 func game_over():
 	$CountdownTimer.stop()
 	$HUD.show_game_over()
+	lose.emit()
 	
 	
 func new_game():
@@ -21,3 +24,7 @@ func _on_countdown_timer_timeout():
 	if timer <=0:
 		$CountdownTimer.stop()
 		game_over()
+
+
+func _on_win() -> void:
+	$CountdownTimer.stop()

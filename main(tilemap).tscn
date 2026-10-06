@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://biyperk20d4ce" path="res://hud.tscn" id="5_lxgm5"]
 [ext_resource type="Script" uid="uid://b3vr70u32bwbk" path="res://you_win.gd" id="6_ddibf"]
 [ext_resource type="PackedScene" uid="uid://be7i0t2ft7n7e" path="res://you_win.tscn" id="7_youwin"]
+[ext_resource type="PackedScene" uid="uid://isbc668158r4" path="res://you_lose.tscn" id="8_glg6o"]
+[ext_resource type="Script" uid="uid://ccxeo0b8qwa5t" path="res://you_lose.gd" id="9_emr40"]
 
 [sub_resource type="GDScript" id="GDScript_11uvh"]
 script/source = "extends RigidBody2D
@@ -60,6 +62,13 @@ texture = ExtResource("4_74oy4")
 [node name="You Win" parent="." unique_id=1537225901 instance=ExtResource("7_youwin")]
 script = ExtResource("6_ddibf")
 
+[node name="You Lose" parent="." unique_id=1817017227 instance=ExtResource("8_glg6o")]
+visible = false
+script = ExtResource("9_emr40")
+
+[connection signal="lose" from="." to="CharacterBody2D" method="_on_lose"]
+[connection signal="lose" from="." to="You Lose" method="_on_lose"]
+[connection signal="win" from="CharacterBody2D" to="." method="_on_win"]
 [connection signal="win" from="CharacterBody2D" to="You Win" method="_on_character_body_2d_win"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="body_entered" from="beaver_nuggets" to="." method="_on_beaver_nuggets_body_entered"]

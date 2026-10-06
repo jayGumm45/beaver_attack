@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://isbc668158r4"]
+
+[ext_resource type="Texture2D" uid="uid://c8jju7oirya5i" path="res://art/LoseScreen-1.png.png" id="1_ft7bt"]
+
+[node name="You Lose" type="CanvasLayer" unique_id=1817017227]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=12635688]
+offset_right = 832.0
+offset_bottom = 512.0
+texture = ExtResource("1_ft7bt")
