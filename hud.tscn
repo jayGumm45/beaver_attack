@@ -61,4 +61,26 @@ vertical_alignment = 1
 [node name="MessageTimer" type="Timer" parent="." unique_id=1243650904]
 one_shot = true
 
+[node name="Snack_Screen" type="CanvasLayer" parent="." unique_id=1733121650]
+
+[node name="ColorRect" type="ColorRect" parent="Snack_Screen" unique_id=1530452546]
+offset_right = 832.0
+offset_bottom = 512.0
+color = Color(0.78039217, 0.13333334, 0.14117648, 1)
+
+[node name="SnackButton" type="Button" parent="Snack_Screen" unique_id=1797823990]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -49.0
+offset_right = 99.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SNACK!"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Snack_Screen/SnackButton" to="." method="_on_snack_button_pressed"]

@@ -36,3 +36,9 @@ func _on_message_timer_timeout():
 
 func hide_message():
 	$Message.hide()
+
+
+func _on_snack_button_pressed():
+	$Snack_Screen/ColorRect.hide()
+	$Snack_Screen/SnackButton.hide()
+	
