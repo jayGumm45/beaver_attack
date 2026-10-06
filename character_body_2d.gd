@@ -12,7 +12,7 @@ var is_moving: bool = false
 var target_position: Vector2
 var tile_size: Vector2
 var screen_size
-var can_move = true
+var can_move = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -95,3 +95,7 @@ func _physics_process(delta: float) -> void:
 func _on_beaver_nuggets_body_entered(body: Node) -> void:
 	can_move=false
 	win.emit()
+
+
+func _on_game_start() -> void:
+	can_move=true
