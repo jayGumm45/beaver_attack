@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b8ggpsivkgusc" path="res://main(tilemap).gd" id="1_11uvh"]
 [ext_resource type="PackedScene" uid="uid://c5l2x4m1i2ngo" path="res://tile_map_layer.tscn" id="1_285bg"]
 [ext_resource type="PackedScene" uid="uid://bv8bpr4ngufkm" path="res://2Dplayer.tscn" id="2_11uvh"]
+[ext_resource type="PackedScene" uid="uid://ygh4h08ig0ng" path="res://enemy.tscn" id="4_2mwn7"]
 [ext_resource type="Texture2D" uid="uid://cwvtxv4n2wdmf" path="res://art/cozy_cafe_icons.png" id="4_74oy4"]
 [ext_resource type="PackedScene" uid="uid://biyperk20d4ce" path="res://hud.tscn" id="5_lxgm5"]
 [ext_resource type="Script" uid="uid://b3vr70u32bwbk" path="res://you_win.gd" id="6_ddibf"]
@@ -31,12 +32,16 @@ size = Vector2(64, 64)
 script = ExtResource("1_11uvh")
 
 [node name="TileMapLayer" parent="." unique_id=388770891 instance=ExtResource("1_285bg")]
-script = null
 
 [node name="CharacterBody2D" parent="." unique_id=1779731844 node_paths=PackedStringArray("tilemap") instance=ExtResource("2_11uvh")]
 position = Vector2(48, 48)
 tilemap = NodePath("../TileMapLayer")
 move_speed = 7.0
+
+[node name="Enemy" parent="." unique_id=648496320 node_paths=PackedStringArray("tilemap", "player") instance=ExtResource("4_2mwn7")]
+position = Vector2(432, 80)
+tilemap = NodePath("../TileMapLayer")
+player = NodePath("../CharacterBody2D")
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=1114500734]
 
@@ -67,11 +72,15 @@ visible = false
 script = ExtResource("9_emr40")
 
 [connection signal="lose" from="." to="CharacterBody2D" method="_on_lose"]
+[connection signal="lose" from="." to="Enemy" method="_on_lose"]
 [connection signal="lose" from="." to="You Lose" method="_on_lose"]
 [connection signal="win" from="CharacterBody2D" to="." method="_on_win"]
+[connection signal="win" from="CharacterBody2D" to="Enemy" method="_on_character_body_2d_win"]
 [connection signal="win" from="CharacterBody2D" to="You Win" method="_on_character_body_2d_win"]
+[connection signal="lose" from="Enemy" to="You Lose" method="_on_enemy_lose"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="body_entered" from="beaver_nuggets" to="." method="_on_beaver_nuggets_body_entered"]
 [connection signal="body_entered" from="beaver_nuggets" to="CharacterBody2D" method="_on_beaver_nuggets_body_entered"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="start_game" from="HUD" to="CharacterBody2D" method="_on_game_start"]
+[connection signal="start_game" from="HUD" to="Enemy" method="_on_game_start"]

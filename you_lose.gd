@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_lose() -> void:
 	visible = true
+
+
+func _on_enemy_lose() -> void:
+	visible = true

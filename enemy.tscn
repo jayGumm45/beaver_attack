@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://ygh4h08ig0ng"]
 
+[ext_resource type="Script" uid="uid://bv7kpahsswhiw" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://cx8baa4ydhexs" path="res://art/beaver_enemy.png" id="1_7k104"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6lj2"]
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8mpy"]
+size = Vector2(30, 30)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=648496320]
+script = ExtResource("1_4gyqm")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1262521638]
@@ -13,3 +18,10 @@ texture = ExtResource("1_7k104")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2031941788]
 shape = SubResource("RectangleShape2D_e6lj2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=875904715]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1798857362]
+shape = SubResource("RectangleShape2D_t8mpy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
