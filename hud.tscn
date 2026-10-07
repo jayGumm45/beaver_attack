@@ -2,48 +2,8 @@
 
 [ext_resource type="Script" uid="uid://oaeauvc4mdwu" path="res://hud.gd" id="1_37p78"]
 
-[sub_resource type="InputEventAction" id="InputEventAction_64ctp"]
-action = &"start_game"
-
-[sub_resource type="Shortcut" id="Shortcut_37p78"]
-events = [SubResource("InputEventAction_64ctp")]
-
 [node name="HUD" type="CanvasLayer" unique_id=31480010]
 script = ExtResource("1_37p78")
-
-[node name="Message" type="Label" parent="." unique_id=1829311067]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -416.0
-offset_top = -44.0
-offset_right = 416.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 64
-text = "SNACK!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="StartButton" type="Button" parent="." unique_id=469414236]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -112.0
-offset_right = 100.0
-offset_bottom = -12.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 64
-shortcut = SubResource("Shortcut_37p78")
-text = "START"
 
 [node name="TimerLabel" type="Label" parent="." unique_id=38250995]
 anchors_preset = 5
@@ -82,5 +42,4 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "SNACK!"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Snack_Screen/SnackButton" to="." method="_on_snack_button_pressed"]
