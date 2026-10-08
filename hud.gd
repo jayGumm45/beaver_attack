@@ -11,6 +11,7 @@ func update_timer(timer):
 
 func _on_snack_button_pressed():
 	$Snack_Screen/ColorRect.hide()
+	$Snack_Screen/TextureRect.hide()
 	$Snack_Screen/SnackButton.hide()
 	start_game.emit()
 	

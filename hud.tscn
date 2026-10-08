@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://biyperk20d4ce"]
 
 [ext_resource type="Script" uid="uid://oaeauvc4mdwu" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="Texture2D" uid="uid://blwndpsiw0t6b" path="res://art/Evil_Beaver.jpg" id="2_64ctp"]
 
 [node name="HUD" type="CanvasLayer" unique_id=31480010]
 script = ExtResource("1_37p78")
@@ -35,11 +36,23 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -101.0
-offset_top = -49.0
+offset_top = 144.0
 offset_right = 99.0
-offset_bottom = 51.0
+offset_bottom = 244.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "SNACK!"
+
+[node name="TextureRect" type="TextureRect" parent="Snack_Screen" unique_id=804339680]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_64ctp")
+expand_mode = 1
+stretch_mode = 3
 
 [connection signal="pressed" from="Snack_Screen/SnackButton" to="." method="_on_snack_button_pressed"]
